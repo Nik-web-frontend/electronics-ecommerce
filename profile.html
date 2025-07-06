@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVault - Premium Electronics</title>
+    <!-- css file  -->
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=LXGW+WenKai+Mono+TC&family=Patrick+Hand&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav1">
+
+        <div class="nav-container">
+            <div class="logo">TechVault</div>
+
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="pro.html" class="nav-link">Products</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link active">Profile</a></li>
+            </ul>
+
+           
+
+            <div class="action">
+                <button class="cart">
+                    <i class="fa-solid fa-cart-shopping" style="color: #74C0FC;"></i>
+
+                    Cart
+                    <span class="cart-count" style="background-color: transparent;color: white;">0</span>
+                </button>
+
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="search-cont">
+        <input class="search" type="text" placeholder="Search">
+        <div class="suggestion"></div>
+    </div>
+    <!-- SIDEBAR  -->
+    <nav class="sidebar" style="background-color: transparent;">
+        <h2 style="margin-bottom: 2.5rem;color: aliceblue;">
+            <i class="fa-solid fa-xmark"></i>
+        </h2>
+        <ul class="side-link" style="width: 80%;">
+
+            <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
+            <li><a href="pro.html" class="nav-link" data-page="products">Products</a></li>
+            <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            <li><a href="#" class="nav-link">Profile</a></li>
+        </ul>
+    </nav>
+    <!-- CART SIDEBAR -->
+    <nav class="cart-sidebar">
+        <h2 style="display: flex;justify-content: space-between;width: 6rem;color: navy;">
+            Cart
+            <i class="fa-solid fa-cart-shopping"></i>
+        </h2>
+        <div class="detail" style="font-weight: 500;margin-top: 3rem;margin-bottom: 3rem;">
+
+        </div>
+        <hr style="margin-top: 1rem;">
+        <div class="total" style=" display:flex; margin-top: 0.5rem;font-weight: 600;">
+            <pre style="font-family: quicksand;">Total Amt  </pre>
+            <pre class="total-price" style="font-family: quicksand;">00</pre>
+        </div>
+        <div style="display:flex;flex-direction: column; width: 100%;justify-content: center; align-items: center;">
+            <button class="ckclr-btn" onclick="window.location.href='checkout.html' ">Checkout</button>
+            <button class="ckclr-btn" onclick="clr()">Clear Cart</button>
+        </div>
+    </nav>
+
+    <!--  PROFILE CONTENT   -->
+
+    <div class="notlogin" style="display: none;">
+        <h2 class="notLogin-heading">You are currently not Logged In</h2>
+        <div class="btn-log-reg">
+
+            <a href="reg.html"><button>Register</button></a>
+            <a href="login.html"><button>Login</button></a>
+
+        </div>
+    </div>
+
+    <div class="login" style="display: none;">
+        <h2 class="login-heading">Welcome
+            <span class="nm"></span>
+        </h2>
+        <button class="logout">Logout</button>
+    </div>
+
+
+    <script>
+
+        let stor = JSON.parse(localStorage.getItem('user'));
+        const login = document.querySelector('.login');
+        const notlogin = document.querySelector('.notlogin');
+
+        if (stor && stor.loggedIn) {
+            login.style.display = 'flex';
+            document.querySelector('.nm').textContent = stor.usernm;
+        }
+        else {
+            notlogin.style.display = 'flex';
+        }
+
+        let logout = document.querySelector('.logout');
+        logout.addEventListener('click', () => {
+            localStorage.removeItem('user');
+            window.location.reload();
+        });
+
+    </script>
+    <script src="prodata.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+ 

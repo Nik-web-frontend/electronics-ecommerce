@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'quicksand';
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    color: #e4e4e7;
+    overflow-x: hidden;
+}
+
+
+.notlogin{
+    padding-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.btn-log-reg{
+    display: flex;
+    gap: 2rem;
+    button{
+        font-family: 'quicksand';
+        font-size: 1.2rem;
+        font-weight: 900;
+        background-color: white;
+        color: #00185bd4;
+        border: none;
+        outline: none;
+        height: 2.5rem;
+        width: 10rem;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color: #00185bd4;
+        color: white;
+    }
+}
+
+.login{
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    
+}
+.logout{
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    font-family: 'quicksand';
+    font-weight: 900;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+@media (max-width:400px) {
+    .notLogin-heading, .login-heading{
+        font-size: 1.2rem;
+    }
+    .btn-log-reg{
+        button{
+            font-size: 0.9rem;
+            width: 7rem;
+            height: 1.5rem;
+        }
+    }
+    
+}
