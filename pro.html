@@ -183,7 +183,7 @@
                     <div class="product-price">$1,299</div>
                     <p class="product-description">Powerful ultrabook with all-day battery life and stunning display for
                         professionals.</p>
-                    <button class=" atc" onclick="cartDetails('Apple Laptop',59990)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Apple Laptop',59990)">Add to Cart</button>
                 </div>
             </div>
 
@@ -222,7 +222,8 @@
                     <div class="product-price">$1,199</div>
                     <p class="product-description">Professional mirrorless camera with 4K video and intelligent
                         autofocus.</p>
-                    <button class="buy-button atc" onclick="cartDetails('Sony Digital Camera',1199)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Sony Digital Camera',1199)">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -235,7 +236,8 @@
                     <div class="product-price">$199</div>
                     <p class="product-description">Voice-controlled smart speaker with premium audio and home
                         automation.</p>
-                    <button class="buy-button atc" onclick="cartDetails('Sony Portable Speaker',199)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Sony Portable Speaker',199)">Add to
+                        Cart</button>
                 </div>
             </div>
         </div>
@@ -245,19 +247,18 @@
     <script src="script.js"></script>
     <script src="prodata.js"></script>
     <script>
-        let atc = document.querySelector('.atc');
+        let atc = document.querySelectorAll('.atc');
         let cartMsg = document.querySelector('.cart-msg');
 
-        atc.addEventListener('click', () => {
-            if (product) {
-                // cartDetails(product.name, product.price);
+        atc.forEach(btn => {
+            btn.addEventListener('click', () => {
                 cartMsg.style.display = 'flex';
+
                 setTimeout(() => {
                     cartMsg.style.display = 'none';
                 }, 2000);
-
-            }
-        })
+            });
+        });
     </script>
 </body>
 
