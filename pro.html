@@ -170,7 +170,7 @@
                     <div class="product-price">$899</div>
                     <p class="product-description">Latest flagship smartphone with advanced AI features and
                         professional-grade camera system.</p>
-                    <button class="buy-button" onclick="cartDetails('iPhone 16 Pro',121900)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('iPhone 16 Pro',121900)">Add to Cart</button>
                 </div>
             </div>
 
@@ -183,7 +183,7 @@
                     <div class="product-price">$1,299</div>
                     <p class="product-description">Powerful ultrabook with all-day battery life and stunning display for
                         professionals.</p>
-                    <button class="buy-button" onclick="cartDetails('Apple Laptop',59990)">Add to Cart</button>
+                    <button class=" atc" onclick="cartDetails('Apple Laptop',59990)">Add to Cart</button>
                 </div>
             </div>
 
@@ -196,7 +196,7 @@
                     <div class="product-price">$349</div>
                     <p class="product-description">Premium noise-canceling headphones with studio-quality sound and
                         comfort.</p>
-                    <button class="buy-button" onclick="cartDetails('Noise Headphone',349)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Noise Headphone',349)">Add to Cart</button>
                 </div>
             </div>
 
@@ -209,7 +209,7 @@
                     <div class="product-price">$399</div>
                     <p class="product-description">Advanced fitness tracking and health monitoring with sleek design.
                     </p>
-                    <button class="buy-button" onclick="cartDetails('Boat Smart Watch',399)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Boat Smart Watch',399)">Add to Cart</button>
                 </div>
             </div>
 
@@ -222,7 +222,7 @@
                     <div class="product-price">$1,199</div>
                     <p class="product-description">Professional mirrorless camera with 4K video and intelligent
                         autofocus.</p>
-                    <button class="buy-button" onclick="cartDetails('Sony Digital Camera',1199)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Sony Digital Camera',1199)">Add to Cart</button>
                 </div>
             </div>
 
@@ -235,7 +235,7 @@
                     <div class="product-price">$199</div>
                     <p class="product-description">Voice-controlled smart speaker with premium audio and home
                         automation.</p>
-                    <button class="buy-button" onclick="cartDetails('Sony Portable Speaker',199)">Add to Cart</button>
+                    <button class="buy-button atc" onclick="cartDetails('Sony Portable Speaker',199)">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -250,7 +250,7 @@
 
         atc.addEventListener('click', () => {
             if (product) {
-                cartDetails(product.name, product.price);
+                // cartDetails(product.name, product.price);
                 cartMsg.style.display = 'flex';
                 setTimeout(() => {
                     cartMsg.style.display = 'none';
