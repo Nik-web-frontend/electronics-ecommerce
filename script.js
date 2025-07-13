@@ -324,6 +324,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 });
 
+// For payment button in checkout.html
+function pay(){
+    clr()
+    window.location.href='success.html';
+}
 
 
 cartDetails(); // with no params
