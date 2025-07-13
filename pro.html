@@ -29,7 +29,7 @@
                 <li><a href="profile.html" class="nav-link">Profile</a></li>
             </ul>
 
-          
+
 
             <div class="action">
 
@@ -82,9 +82,11 @@
     </div>
 
     <!-- Products Page -->
-   
-
-     </div>
+    <div class="cart-msg-container">
+        <div class="cart-msg">
+            Added to cart
+        </div>
+    </div>
     <div class="mansory">
         <a href="propage.html?id=3">
             <div class="card">
@@ -242,6 +244,21 @@
 
     <script src="script.js"></script>
     <script src="prodata.js"></script>
+    <script>
+        let atc = document.querySelector('.atc');
+        let cartMsg = document.querySelector('.cart-msg');
+
+        atc.addEventListener('click', () => {
+            if (product) {
+                cartDetails(product.name, product.price);
+                cartMsg.style.display = 'flex';
+                setTimeout(() => {
+                    cartMsg.style.display = 'none';
+                }, 2000);
+
+            }
+        })
+    </script>
 </body>
 
 </html>
