@@ -1,0 +1,53 @@
+.mansory{
+    width: 90%;
+    column-gap: 1rem;
+    column-count: 3;
+    margin:auto;
+    margin-top: 5rem;
+    img{
+        width: 100%;
+        /* margin-bottom: 1rem; */
+        margin-top: 1rem;
+         filter: brightness(0.8);
+         border-radius: 1.5rem;
+    }
+    img:hover{
+        transform: scale(0.98);
+        transition: transform 0.3s ease-in-out;
+        filter: brightness(1);
+        cursor: pointer;
+        
+    }
+    .card{
+        position: relative;
+        break-inside: avoid;
+        overflow: hidden;
+        border-radius: 1.5rem;
+    }
+    .card:hover{
+        box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+    }
+    p{
+        padding: 1rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+}
+
+
+
+@media (max-width:780px){
+    .mansory{
+        column-count: 2;
+    }
+}
+
+@media (max-width:426px){
+    .mansory{
+        column-count: 1;
+    }
+}
